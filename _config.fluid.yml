@@ -426,7 +426,7 @@ footer:
 index:
   # 首页 Banner 头图，可以是相对路径或绝对路径，以下相同
   # Path of Banner image, can be a relative path or an absolute path, the same on other pages
-  banner_img: /img/wallhaven-l3gll2_1280x720.png
+  banner_img: /img/55325876_p0.jpg
 
   # 头图高度，屏幕百分比
   # Height ratio of banner image
@@ -498,7 +498,7 @@ index:
 # Post Page
 #---------------------------
 post:
-  banner_img: /img/wallhaven-l3gll2_1280x720.png
+  banner_img: /img/55325876_p0.jpg
   banner_img_height: 70
   banner_mask_alpha: 0.3
 
@@ -792,7 +792,7 @@ cusdis:
 # Archive Page
 #---------------------------
 archive:
-  banner_img: /img/wallhaven-l3gll2_1280x720.png
+  banner_img: /img/55325876_p0.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
   subtitle:
@@ -804,7 +804,7 @@ archive:
 #---------------------------
 category:
   enable: true
-  banner_img: /img/wallhaven-l3gll2_1280x720.png
+  banner_img: /img/55325876_p0.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
   subtitle:
@@ -834,7 +834,7 @@ category:
 #---------------------------
 tag:
   enable: true
-  banner_img: /img/wallhaven-l3gll2_1280x720.png
+  banner_img: /img/55325876_p0.jpg
   banner_img_height: 80
   banner_mask_alpha: 0.3
   subtitle:
@@ -852,7 +852,7 @@ tag:
 #---------------------------
 about:
   enable: true
-  banner_img: /img/wallhaven-l3gll2_1280x720.png
+  banner_img: /img/55325876_p0.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
   subtitle:
@@ -864,8 +864,7 @@ about:
   icons:
     - { class: "iconfont icon-github-fill", link: "https://github.com/ricofx47", tip: "gitHub" }
     - { class: "iconfont icon-telegram-fill", link: "https://t.me/ricofx47", tip: "telegram" }
-    - { class: "iconfont icon-mail", link: "https://ricofx47.cc/atom.xml", tip: "email" }
-    - { class: "iconfont icon-rss-fill", link: "https://github.com/ricofx47", tip: "rss" }
+    - { class: "iconfont icon-rss-fill", link: "https://ricofx47.cc/atom.xml", tip: "rss" }
 
 #---------------------------
 # 自定义页
@@ -875,7 +874,7 @@ about:
 # Custom Page through `hexo new page`
 #---------------------------
 page:
-  banner_img: /img/wallhaven-l3gll2_1280x720.png
+  banner_img: /img/55325876_p0.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
 
@@ -886,7 +885,7 @@ page:
 #---------------------------
 page404:
   enable: true
-  banner_img: /img/wallhaven-l3gll2_1280x720.png
+  banner_img: /img/55325876_p0.jpg
   banner_img_height: 85
   banner_mask_alpha: 0.3
   subtitle: "Page not found"
@@ -898,7 +897,7 @@ page404:
 #---------------------------
 links:
   enable: true
-  banner_img: /img/wallhaven-l3gll2_1280x720.png
+  banner_img: /img/55325876_p0.jpg 
   banner_img_height: 60
   banner_mask_alpha: 0.3
   subtitle:

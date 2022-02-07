@@ -28,4 +28,4 @@ expected variable end
 ```
 网上搜索了一下，才知道不能连用两个{% raw %} {{ {% endraw %} ![](https://cdn.jsdelivr.net/gh/microlong666/tieba_mobile_emotions/image_emoticon27.png)，解决方法可以看这个[issue](https://github.com/hexojs/hexo/issues/3224)  
 
-最后推荐一下我的这篇[文章](ricofx47.cc/2020/08/29/LOJ2958「COCI_2009.10」ALADIN/)，希望你可以看看（（
+最后推荐一下我的这篇[文章](https://ricofx47.cc/2020/08/29/LOJ2958「COCI_2009.10」ALADIN/)，希望你可以看看（（
