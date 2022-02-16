@@ -37,7 +37,7 @@ $k$次方的组合意义是有顺序的选出$k$条边，统计在多少个子�
 1. 上
 
 2. 两条边三个点，$A\rightarrow B\rightarrow C$，枚举一条边$(s,t)$，$(deg-s-1)+(deg-t-1)$  
-3. 两条边四个点，$A\rightarrow B,C\rightarrow D$，总方案数减去上面的，$m^2-①-②$
+3. 两条边四个点，$A\rightarrow B$,$C\rightarrow D$，总方案数减去上面的，$m^2-①-②$
 
 ## k=3
 
@@ -48,8 +48,8 @@ $k$次方的组合意义是有顺序的选出$k$条边，统计在多少个子�
 1. 三条边重合，即$k=1$
 2. 有两条边重合，对应$k=2$
 3. 三元环，直接[三元环计数](https://widsnoy.top/archives/76/)
-4. 三边四点，$A\rightarrow B\rightarrow C \rightarrow D$或者$A\rightarrow B, A\rightarrow C, A\rightarrow D$。对于第一种枚举边$(B,C)$，$(deg-B-1)\times (deg-C-1)$，$A,D$可能是一个点，要减去三元环的情况。第二种枚举$A$，$deg-A\times (deg-A-1)\times (deg-A-2)$。
-5. 三边五点， 可能有一种情况$A\rightarrow B\rightarrow C,D\rightarrow E$。枚举$B$点，有$deg-B\times(deg-B-1)\times (m-2)$种方法。但是有可能算到三元环和三边四点的情况。这里注意对于三边四点的第一种情况会算两次，第二种情况算三次。
+4. 三边四点，$A\rightarrow B\rightarrow C \rightarrow D$或者$A\rightarrow B$, $A\rightarrow C$, $A\rightarrow D$。对于第一种枚举边$(B\\,C)$，$(deg-B-1)\times (deg-C-1)$，A,D可能是一个点，要减去三元环的情况。第二种枚举$A$，$deg-A\times (deg-A-1)\times (deg-A-2)$。
+5. 三边五点， 可能有一种情况$A\rightarrow B\rightarrow C$,$D\rightarrow E$。枚举$B$点，有$deg-B\times(deg-B-1)\times (m-2)$种方法。但是有可能算到三元环和三边四点的情况。这里注意对于三边四点的第一种情况会算两次，第二种情况算三次。
 6. 三边两点，$m\times (m-1)\times (m-2)$是有序选不重边的所有方案，减去③④⑤就是这个。
 
 上面的所有选出的情况都是不考虑顺序的，选不重的边最后应该乘上$6$表示选取顺序。

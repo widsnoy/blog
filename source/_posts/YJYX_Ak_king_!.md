@@ -68,4 +68,4 @@ T4这是什么题啊，“足够聪明”明显ub了啊，到底是怎么定义�
 
 
 
-> ${\color{red} {文章复制粘贴自}}$https://www.luogu.com.cn/blog/mzyc/si-chuan-tai-wang-e-ka-ji
+> 文章复制粘贴自 https://www.luogu.com.cn/blog/mzyc/si-chuan-tai-wang-e-ka-ji
