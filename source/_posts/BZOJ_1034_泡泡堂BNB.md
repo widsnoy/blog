@@ -1,6 +1,6 @@
 ---
 title: BZOJ 1034 泡泡堂BNB
-math: true
+mathjax: true
 date: 2020-09-17 15:34:20
 categories: 
   - 题解
@@ -14,7 +14,6 @@ picUrl:
 >[题目链接](https://darkbzoj.tk/problem/1034)  
 
 田忌赛马 
-<!--more--> 
 1. 如果最强的能赢最强的，先赢一把
 2. 最弱的能赢最弱的，先赢一把  
 3. 否则用最弱的打最强的  

@@ -1,6 +1,6 @@
 ---
 title: P1345 Telecowmunication
-math: true
+mathjax: true
 date: 2020-09-16 12:29:08
 categories: 
   - 题解
@@ -17,7 +17,6 @@ picUrl:
 
 这道题是删点  
 那我们想办法把它变成删边的题，就是删除某条边和删一个点效果一样  
-<!--more-->
 把每个点$i$拆成$i+n$和$i$，$i$连入边，$i+n$连所有出边。  
 再把$i$和$i+n$连上一条边。  
 那么删除$i$和$i+n$间的边和删除$i$点效果一样  

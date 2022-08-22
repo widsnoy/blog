@@ -1,6 +1,6 @@
 ---
 title: Old Driver Tree「珂朵莉树」
-math: true
+mathjax: true
 date: 2020-08-29 15:00:00
 categories: 
   - 模板
@@ -15,7 +15,6 @@ tags:
 
 ~~虽然构造数据只能拿来骗分~~，有时候作为辅助工具是比较方便的。  
 只用讲基本的操作。  
-<!--more-->
 大概是把相同的元素合并成一个块以减少时间复杂度。  
 
 ## 块信息
@@ -43,8 +42,8 @@ IT split(int pos) {
     return s.insert(node(pos, r, v)).first;
 }
 ```
-注意 set 自带的 lower-bound 和 upper-bound 的时间复杂度为$\mathcal{O}(log n)$。
-但使用 algorithm 库中的 lower-bound 和 upper-bound 函数对 set 中的元素进行查询，时间复杂度为 $\mathcal{O}(n)$。似乎是 set 不支持随机访问的原因。  
+注意 set 自带的 lower-bound 和 upper-bound 的时间复杂度为$\mathjaxcal{O}(log n)$。
+但使用 algorithm 库中的 lower-bound 和 upper-bound 函数对 set 中的元素进行查询，时间复杂度为 $\mathjaxcal{O}(n)$。似乎是 set 不支持随机访问的原因。  
 s.insert(node(pos, r, v)).first 返回的是插入元素的地址。  
 
 ## assign函数

@@ -1,6 +1,6 @@
 ---
 title: UVa1642 魔法gcd Magical gcd
-math: true
+mathjax: true
 date: 2020-09-30 09:15:14
 categories: 
   - 题解
@@ -13,7 +13,6 @@ picUrl:
 
 
 题目： luogu: [UVa1642](https://www.luogu.com.cn/problem/UVA1642)
-<!--more-->
 # solution
 
 因为要求一个最优的子序列，可以想到枚举这个子序列的右端点$j$。  那么怎么快速算出左端点$i$的答案呢？  

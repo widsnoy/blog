@@ -1,6 +1,6 @@
 ---
 title: P1344 Pollutant Control
-math: true
+mathjax: true
 date: 2020-09-16 10:57:00
 categories: 
   - 题解
@@ -16,9 +16,8 @@ picUrl:
 >[题目链接](https://www.luogu.com.cn/problem/P1344)  
 
 最小割模板题  
-<!--more-->
 根据最小割最大流定理  
-$f(s,t)-{max}=c(s,t)-{min}$  
+$f(s,t)_{max}=c(s,t)_{min}$  
 证明如下:  
 $f(s,t)\leq c(s,t)$  
 $f(s,t)=S\text{出边流量}-S\text{入边流量}\leq S\text{出边流量}=c(s,t)$  

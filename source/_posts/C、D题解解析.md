@@ -1,6 +1,6 @@
 ---
 title: C、D题解解析
-math: true
+mathjax: true
 date: 2020-11-12 20:25:07
 categories: 
   - 测试
@@ -15,7 +15,6 @@ thumb:
 
 > 首先本人并不会做这两道题，以下只是对题解的理解
 
-<!--more-->
 
 ## 猪国杀
 
@@ -93,15 +92,15 @@ thumb:
 
 考虑固定选了哪些牌，并求出有多少个方案使得选的牌中前几个恰好是这些，那么有
 
-$ans \times A^n = \sum-{i=0}^{n}\sum-{j=1}^{A}\sum-{k=1}^{n-i}g-{i,j-1,m-j\times k}\times \binom{n}{i} \sum-{t \geq k}\binom{n-i}{t} \times (A-j)^{n-i-t}$
+$ans \times A^n = \sum_{i=0}^{n}\sum_{j=1}^{A}\sum_{k=1}^{n-i}g_{i,j-1,m-j\times k}\times \binom{n}{i} \sum_{t \geq k}\binom{n-i}{t} \times (A-j)^{n-i-t}$
 
-其中$g-{i,j,k}$表示有多少个长度为$i$的正整数序列满足每一个数字不大于$j$且所有数字总和不超过$k$
+其中$g_{i,j,k}$表示有多少个长度为$i$的正整数序列满足每一个数字不大于$j$且所有数字总和不超过$k$
 
 大概就是枚举选的牌中的最大值$j$，最大值个数$k$，以及选了$i$个小于$j$的牌。
 
 可以用背包计算，也可以枚举有多少个数字大于$j$容斥计算，那么有
 
-$ans \times A^n = \sum-{i=0}^{n}\sum-{j=1}^{A}\sum-{k=1}^{n-i}\left(\sum-{t=0}^i (-1)^t\binom{i}{t}\binom{m-k\times j-t \times(j-1)}{i}\right)\times \binom{n}{i} \sum-{t \geq k}\binom{n-i}{t} \times (A-j)^{n-i-t}$
+$ans \times A^n = \sum_{i=0}^{n}\sum_{j=1}^{A}\sum_{k=1}^{n-i}\left(\sum_{t=0}^i (-1)^t\binom{i}{t}\binom{m-k\times j-t \times(j-1)}{i}\right)\times \binom{n}{i} \sum_{t \geq k}\binom{n-i}{t} \times (A-j)^{n-i-t}$
 
 组合数为$0$的时候能直接跳过，那么直接按照上式计算大概是$O(n^2m\log m)$的。
 
@@ -115,7 +114,7 @@ $ans \times A^n = \sum-{i=0}^{n}\sum-{j=1}^{A}\sum-{k=1}^{n-i}\left(\sum-{t=0}^i
 
 解释下最后的容斥是什么意思。
 
-$$g-{i,j,k}=\sum-{t=0}^i (-1)^t\binom{i}{t}\binom{k -t \times j}{i}$$
+$$g_{i,j,k}=\sum_{t=0}^i (-1)^t\binom{i}{t}\binom{k -t \times j}{i}$$
 
 这东西并不是插板法，因为并不要求把$k$选完。
 
@@ -200,7 +199,7 @@ $$g-{i,j,k}=\sum-{t=0}^i (-1)^t\binom{i}{t}\binom{k -t \times j}{i}$$
 
 我们只要固定一个$T1$的根即可，但是需要枚举$T2$的根并每次进行dp。
 
-令$dp-{u,S}$表示$u$的儿子已经向$T2$的$S$中的点建立双射的方案数，每次枚举当前儿子与哪个点建立双射进行转移。
+令$dp_{u,S}$表示$u$的儿子已经向$T2$的$S$中的点建立双射的方案数，每次枚举当前儿子与哪个点建立双射进行转移。
 
 然后将$T1$每个点与$T2$的根配对的方案数加起来。
 

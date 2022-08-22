@@ -1,6 +1,6 @@
 ---
 title: Amount of Degrees
-math: true
+mathjax: true
 date: 2020-10-14 19:07:19
 categories: 
   - 题解
@@ -11,7 +11,6 @@ tags:
 
 
 >[Amount of Degrees](https://loj.ac/problem/10163)  
-<!--more-->
 这篇博客是来贴代码的，真正的题解看[这里](https://wenku.baidu.com/view/d2414ffe04a1b0717fd5dda8.html)  
 
 ```cpp

@@ -1,6 +1,6 @@
 ---
 title: LOJ10059 Censoring
-math: true
+mathjax: true
 date: 2020-09-26 18:03:19
 categories: 
   - 题解
@@ -13,7 +13,6 @@ picUrl:
 
 
 >[题目链接](https://loj.ac/problem/10059)  
-<!--more-->
 维护一个栈，表示每个输出字符对应$tire$图上的节点，在$tire$图上游走时，如果走到某个节点是敏感词结束的地方，就弹出敏感词，并且栈回退到到这个敏感词之前的位置。
 
 ```cpp

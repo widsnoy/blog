@@ -1,6 +1,6 @@
 ---
 title: CF868F Yet Another Minimization Problem
-math: true
+mathjax: true
 date: 2020-09-15 17:24:00
 categories: 
   - 题解
@@ -16,7 +16,7 @@ picUrl:
 $dp[i][k]=min(dp[j][k-1]+w)$.  
 可以发现决策是具有单调性的,其他题解说得都很清楚了.  
 那么就可以用分治来优化这个方程.  
-因为是分层的复杂度是$\mathcal{O}(nlogn)$.  
+因为是分层的复杂度是$\mathjaxcal{O}(nlogn)$.  
 
 ```cpp
 #include<bits/stdc++.h>

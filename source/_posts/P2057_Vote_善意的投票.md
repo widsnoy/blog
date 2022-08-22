@@ -1,6 +1,6 @@
 ---
 title: P2057 Vote 善意的投票
-math: true
+mathjax: true
 date: 2020-09-16 15:39:06
 categories: 
   - 题解
@@ -15,7 +15,6 @@ picUrl:
 >[题目链接](https://www.luogu.com.cn/problem/P2057)  
 
 最小割经典模型  
-<!--more-->
 把投票的$0$，$1$分别看作源点和汇点。  
 每个小朋友都和自己投票的种类连一条边。  
 而好朋友直接也连一条边。  

@@ -1,6 +1,6 @@
 ---
 title: ARC062F Painting Graphs with AtCoDeer
-math: true
+mathjax: true
 date: 2020-08-29 14:55:00
 categories: 
   - 题解
@@ -18,11 +18,10 @@ tags:
 问有多少本质不同的染色方案，输出对$10^9+7$取模。
 ![arc062f-1.png][1]
 
-<!--more-->
 
 # 题解
 首先考虑$n$个点的简单环怎么做。  
-根据$Burnside$引理，染色方案有$\frac{1}{n}\sum\limits-{i=0}^{n-1}k^{(n,i)}$种。
+根据$Burnside$引理，染色方案有$\frac{1}{n}\sum\limits_{i=0}^{n-1}k^{(n,i)}$种。
 那么可以将图的所有点双联通分量单独处理。  
 $BCC$缩点后，边分为三种情况。1. 单边  2. 单环  3. 复合环。  
 单边就直接算就可以了。  

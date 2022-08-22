@@ -1,6 +1,6 @@
 ---
 title: LOJ 528「LibreOJ β Round #4」求和
-math: true
+mathjax: true
 date: 2020-08-30 21:14:00
 categories: 
   - 题解
@@ -11,35 +11,34 @@ tags:
 
 
 ##题目
-$$\sum\limits-{i=1}^{n}\sum\limits-{j=1}^{m}\mu ^2(\gcd (i,j))\bmod 998244353$$  
-<!--more-->
+$$\sum\limits_{i=1}^{n}\sum\limits_{j=1}^{m}\mu ^2(\gcd (i,j))\bmod 998244353$$  
 ##题解
 以下默认$n\leq m$
 $$
 \begin{equation}
 \begin{aligned}
-&\sum\limits-{i=1}^{n}\sum\limits-{j=1}^{m}\mu ^2(\gcd (i,j))\\
-&=\sum\limits-{d=1}^{n}\mu ^2(d)\sum\limits-{i=1}^{n}\sum\limits-{j=1}^{m}[\gcd (i,j)=d]\\
-&=\sum\limits-{d=1}^{n}\mu ^2(d)\sum\limits-{d\mid t} \mu (\frac{t}{d})\left\lfloor\frac{m}{t}\right\rfloor \left\lfloor\frac{n}{t}\right\rfloor \\
-&=\sum\limits-{t=1}^{n}\left\lfloor\frac{m}{t}\right\rfloor \left\lfloor\frac{n}{t}\right\rfloor\sum\limits-{d\mid t}\mu ^2(d)\mu (\frac{t}{d})
+&\sum\limits_{i=1}^{n}\sum\limits_{j=1}^{m}\mu ^2(\gcd (i,j))\\
+&=\sum\limits_{d=1}^{n}\mu ^2(d)\sum\limits_{i=1}^{n}\sum\limits_{j=1}^{m}[\gcd (i,j)=d]\\
+&=\sum\limits_{d=1}^{n}\mu ^2(d)\sum\limits_{d\mid t} \mu (\frac{t}{d})\left\lfloor\frac{m}{t}\right\rfloor \left\lfloor\frac{n}{t}\right\rfloor \\
+&=\sum\limits_{t=1}^{n}\left\lfloor\frac{m}{t}\right\rfloor \left\lfloor\frac{n}{t}\right\rfloor\sum\limits_{d\mid t}\mu ^2(d)\mu (\frac{t}{d})
 \end{aligned}
 \end{equation}
 $$
 
 关于第二个等号,用的是莫比乌斯反演的一个结论。  
-如果$f(d)=\sum\limits-{d\mid t}g(t)$  
-那么$g(d)=\sum\limits-{d\mid t}\mu (\frac{t}{d})f(t)$  
+如果$f(d)=\sum\limits_{d\mid t}g(t)$  
+那么$g(d)=\sum\limits_{d\mid t}\mu (\frac{t}{d})f(t)$  
 
-这里不妨把$f(t)$看作$\sum\limits-{i=1}^{n}\sum\limits-{j=1}^{m}[t\mid \gcd (i,j)]$  
-而$g(d)=\sum\limits-{i=1}^{n}\sum\limits-{j=1}^{m}[d=\gcd (i,j)]$  
-不难发现$f(t)=\sum\limits-{t\mid d}g(d)$  
+这里不妨把$f(t)$看作$\sum\limits_{i=1}^{n}\sum\limits_{j=1}^{m}[t\mid \gcd (i,j)]$  
+而$g(d)=\sum\limits_{i=1}^{n}\sum\limits_{j=1}^{m}[d=\gcd (i,j)]$  
+不难发现$f(t)=\sum\limits_{t\mid d}g(d)$  
 大家都知道$f(t)=\left\lfloor\frac{n}{t}\right\rfloor\left\lfloor\frac{m}{t}\right\rfloor$  
 所以第二个等号即得证。  
 
-交换一下求和符号，即得到了$$\sum\limits-{t=1}^{n}\left\lfloor\frac{m}{t}\right\rfloor \left\lfloor\frac{n}{t}\right\rfloor\sum\limits-{d\mid t}\mu ^2(d)\mu (\frac{t}{d})$$  
+交换一下求和符号，即得到了$$\sum\limits_{t=1}^{n}\left\lfloor\frac{m}{t}\right\rfloor \left\lfloor\frac{n}{t}\right\rfloor\sum\limits_{d\mid t}\mu ^2(d)\mu (\frac{t}{d})$$  
 
-发现前面可以分块，所以只用关心怎么求$\sum\limits-{d\mid t}\mu ^2(d)\mu (\frac{t}{d})$  
-令$f(t)=\sum\limits-{d\mid t}\mu ^2(d)\mu (\frac{t}{d})$  
+发现前面可以分块，所以只用关心怎么求$\sum\limits_{d\mid t}\mu ^2(d)\mu (\frac{t}{d})$  
+令$f(t)=\sum\limits_{d\mid t}\mu ^2(d)\mu (\frac{t}{d})$  
 $f$显然是积性函数，根据积性函数的性质，发现
 1.$f(p)=0$  
 2.$f(p^2)=-1$  
@@ -51,7 +50,7 @@ $$
 \begin{equation}
     f(x)=
    \begin{cases}
-   \mu (\sqrt{x})&\mbox{if $\sqrt{x}\in \mathbb{N}$}\\
+   \mu (\sqrt{x})&\mbox{if $\sqrt{x}\in \mathjaxbb{N}$}\\
    0\,&\mbox{overwise}
    \end{cases}
 \end{equation}
@@ -61,19 +60,19 @@ $$
 $$
 \begin{equation}
 \begin{aligned}
-&\sum\limits-{t=1}^{n}\left\lfloor\frac{m}{t}\right\rfloor \left\lfloor\frac{n}{t}\right\rfloor\sum\limits-{d\mid t}\mu ^2(d)\mu (\frac{t}{d})\\
-&=\sum\limits-{t=1}^{n}\left\lfloor\frac{m}{t}\right\rfloor \left\lfloor\frac{n}{t}\right\rfloor f(t)\\
-&=\sum\limits-{t=1}^{n}\left\lfloor\frac{m}{t}\right\rfloor \left\lfloor\frac{n}{t}\right\rfloor \mu (\sqrt{t})[\sqrt{t} \in \mathbb{N}]\\
+&\sum\limits_{t=1}^{n}\left\lfloor\frac{m}{t}\right\rfloor \left\lfloor\frac{n}{t}\right\rfloor\sum\limits_{d\mid t}\mu ^2(d)\mu (\frac{t}{d})\\
+&=\sum\limits_{t=1}^{n}\left\lfloor\frac{m}{t}\right\rfloor \left\lfloor\frac{n}{t}\right\rfloor f(t)\\
+&=\sum\limits_{t=1}^{n}\left\lfloor\frac{m}{t}\right\rfloor \left\lfloor\frac{n}{t}\right\rfloor \mu (\sqrt{t})[\sqrt{t} \in \mathjaxbb{N}]\\
 \end{aligned}
 \end{equation}
 $$
-数论分块即可，时间复杂度$\mathcal{O}(\sqrt{n})$
+数论分块即可，时间复杂度$\mathjaxcal{O}(\sqrt{n})$
 
 ##代码
 ```cpp
 #include <cstdio>
 #include <algorithm>
-#include <cmath>
+#include <cmathjax>
 using namespace std;
 typedef long long ll;
 const int maxn = 1e7;

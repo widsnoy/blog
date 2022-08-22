@@ -1,6 +1,6 @@
 ---
 title: 「LibreOJ β Round #2」DP 一般看规律
-math: true
+mathjax: true
 date: 2020-10-20 21:10:31
 categories: 
   - 题解
@@ -13,7 +13,6 @@ tags:
 
 感觉题目不是很难，不过代码技巧学习了。  
 
-<!--more-->
 
 把所有数按颜色插入到$\text{set}$里面，每次合并的时候对于每个数只有前驱或者后缀会产生答案。  
 

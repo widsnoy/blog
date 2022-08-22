@@ -1,6 +1,6 @@
 ---
 title: LOJ 3282 「JOISC 2020 Day4」治疗计划
-math: true
+mathjax: true
 date: 2020-08-31 18:36:00
 categories: 
   - 题解
@@ -11,8 +11,7 @@ tags:
 >[题目链接](https://loj.ac/problem/3282)  
 
 两个计划的治疗区间$[l-i,r-i]$, $[l-j,r-j]$可以合并，当且仅当$[r-i-l-j+1\geq \left |T-i-T-j\right |]$  
-按照区间顺序，可以有$\mathcal{O}(m^2)$的暴力 dp , 每次选出一个最小的去合并其他区间。  
-<!--more-->
+按照区间顺序，可以有$\mathjaxcal{O}(m^2)$的暴力 dp , 每次选出一个最小的去合并其他区间。  
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;

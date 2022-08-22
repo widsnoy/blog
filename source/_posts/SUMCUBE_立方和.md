@@ -1,6 +1,6 @@
 ---
 title: SUMCUBE 立方和
-math: true
+mathjax: true
 date: 2020-10-20 20:26:55
 categories: 
   - 题解
@@ -18,7 +18,6 @@ tags:
 
 $k$次方的组合意义是有顺序的选出$k$条边，统计在多少个子图中出现。  
 
-<!--more-->
 
 ## k=1
 

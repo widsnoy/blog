@@ -1,6 +1,6 @@
 ---
 title: LOJ 3265 Delegation
-math: true
+mathjax: true
 date: 2020-09-23 07:43:39
 categories: 
   - 题解
@@ -14,7 +14,6 @@ picUrl:
 >[题目链接](https://loj.ac/problem/3265)  
 
 这题看起来挺像赛道修建。  
-<!--more-->
 但是是要求把所有路选完，所以贪心方法不太一样。  
 
 首先，二分以后并不是能选就选，这个看样例就知道。  

@@ -1,6 +1,6 @@
 ---
 title: CF1416C XOR Inverse
-math: true
+mathjax: true
 date: 2020-09-29 16:28:02
 categories: 
   - 题解
@@ -14,7 +14,6 @@ picUrl:
 >[题目链接](https://codeforces.com/contest/1416/problem/C)  
 
 按位看每一个数。  
-<!--more-->
 如果某两个数是逆序对，那必然是有一个高位不同。  
 如果两个数在那一位上面都$\text{xor}$上$1$，两个数的大小关系将会颠倒。  
 

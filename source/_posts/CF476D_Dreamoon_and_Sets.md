@@ -1,6 +1,6 @@
 ---
 title: CF476D Dreamoon and Sets
-math: true
+mathjax: true
 date: 2020-09-15 17:22:25
 categories: 
   - 题解
@@ -12,7 +12,6 @@ picUrl:
 
 
 构造。
-<!--more-->
 因为四元组最大公因数是$k$，所以将四个数同时除以$k$，得到的四个数互质。  
 所以构造出四个互质的数就可以了。  
 设第一个数是$x$，因为四元组尽量小，所以构造的数要尽量接近。  

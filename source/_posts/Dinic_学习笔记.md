@@ -1,6 +1,6 @@
 ---
 title: Dinic 学习笔记
-math: true
+mathjax: true
 date: 2020-09-16 09:59:00
 categories: 
   - 模板
@@ -14,8 +14,7 @@ picUrl:
 
 >[最大流模板题](https://www.luogu.com.cn/problem/P3376)  
 
-dinic 是在残量网络上分层后$\mathcal{O}(n^2m)$找增广路的算法  
-<!--more-->
+dinic 是在残量网络上分层后$\mathjaxcal{O}(n^2m)$找增广路的算法  
 ## 定义
 1. 容量：$c(u,v)$表示边最大允许的容量  
 2. 流量：$f(u,v)$表示一条有向边中已经占用的流量  
@@ -30,10 +29,10 @@ dinic 是在残量网络上分层后$\mathcal{O}(n^2m)$找增广路的算法
 合法的流量图满足三个性质：  
 1. 容量限制：$f(u,v)\leq c(u,v)$  
 2. 斜对称性：$f(u,v)=-f(v,u)$  
-3. 流量守恒：除了源点和汇点，$\sum\limits-{(u,v)\in E}f(u,v)=0$  
+3. 流量守恒：除了源点和汇点，$\sum\limits_{(u,v)\in E}f(u,v)=0$  
 
 ## dinic  
-最大流问题是最大化$\sum\limits-{(s,v)\in E}f(s,v)$或者$\sum\limits-{(v,t)\in E}f(v,t)$  
+最大流问题是最大化$\sum\limits_{(s,v)\in E}f(s,v)$或者$\sum\limits_{(v,t)\in E}f(v,t)$  
 dinic 算法在不断 bfs 将图分层后，寻找增广路进行增广。  
 当无法增广，即层次图中没有汇点时，增广结束，此时源点到汇点的流量最大。  
 
