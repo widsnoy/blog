@@ -1,14 +1,15 @@
 ---
 title: CF868F Yet Another Minimization Problem
 mathjax: true
-date: 2020-09-15 17:24:00
-categories: 
+categories:
   - 题解
-tags: 
+tags:
   - 动态规划
   - CDQ分治
-description: 
-picUrl: 
+abbrlink: bc64
+date: 2020-09-15 17:24:00
+description:
+picUrl:
 ---
 
 

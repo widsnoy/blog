@@ -1,15 +1,16 @@
 ---
 title: 300IQ Summer 2020 Round 2
 mathjax: true
-date: 2020-08-29 14:52:00
-categories: 
+categories:
   - 测试
-tags: 
+tags:
   - CDQ分治
   - hash
   - 扩展欧几里得
-description: 
-picUrl: 
+abbrlink: 6d31
+date: 2020-08-29 14:52:00
+description:
+picUrl:
 ---
 
 

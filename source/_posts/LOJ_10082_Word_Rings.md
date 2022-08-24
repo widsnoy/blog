@@ -1,14 +1,15 @@
 ---
 title: LOJ 10082 Word Rings
 mathjax: true
-date: 2020-09-26 21:34:38
-categories: 
+categories:
   - 题解
-tags: 
+tags:
   - 图论
   - 思维好题
-description: 
-picUrl: 
+abbrlink: 29bb
+date: 2020-09-26 21:34:38
+description:
+picUrl:
 ---
 
 

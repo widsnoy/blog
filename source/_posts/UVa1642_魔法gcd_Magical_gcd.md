@@ -1,14 +1,15 @@
 ---
 title: UVa1642 魔法gcd Magical gcd
 mathjax: true
-date: 2020-09-30 09:15:14
-categories: 
+categories:
   - 题解
-tags: 
+tags:
   - gcd
   - 数论
-description: 
-picUrl: 
+abbrlink: '6471'
+date: 2020-09-30 09:15:14
+description:
+picUrl:
 ---
 
 

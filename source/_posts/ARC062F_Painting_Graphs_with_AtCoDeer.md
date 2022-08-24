@@ -1,13 +1,14 @@
 ---
 title: ARC062F Painting Graphs with AtCoDeer
 mathjax: true
-date: 2020-08-29 14:55:00
-categories: 
+categories:
   - 题解
-tags: 
+tags:
   - Burnside引理
   - 组合数学
   - 图论
+abbrlink: c4cd
+date: 2020-08-29 14:55:00
 ---
 
 

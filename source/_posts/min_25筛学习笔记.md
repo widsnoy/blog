@@ -1,12 +1,13 @@
 ---
 title: min-25筛学习笔记
 mathjax: true
-date: 2020-09-20 20:26:00
-categories: 
+categories:
   - 模板
-tags: 
+tags:
   - min-25筛
   - 数论
+abbrlink: 14a8
+date: 2020-09-20 20:26:00
 ---
 
 >min-25筛学习笔记

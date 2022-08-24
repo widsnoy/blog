@@ -1,14 +1,15 @@
 ---
 title: SUMCUBE 立方和
 mathjax: true
-date: 2020-10-20 20:26:55
-categories: 
+categories:
   - 题解
-tags: 
+tags:
   - 图论
   - 组合数学
   - 组合数
   - 三元环
+abbrlink: b014
+date: 2020-10-20 20:26:55
 ---
 
 

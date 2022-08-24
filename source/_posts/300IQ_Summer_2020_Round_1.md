@@ -1,14 +1,15 @@
 ---
 title: 300IQ Summer 2020 Round 1
 mathjax: true
-date: 2020-08-29 14:51:00
-categories: 
+categories:
   - 测试
-tags: 
+tags:
   - 组合数
   - 分治
-description: 
-picUrl: 
+abbrlink: 6c71
+date: 2020-08-29 14:51:00
+description:
+picUrl:
 ---
 
 

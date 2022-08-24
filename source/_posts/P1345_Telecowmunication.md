@@ -1,15 +1,16 @@
 ---
 title: P1345 Telecowmunication
 mathjax: true
-date: 2020-09-16 12:29:08
-categories: 
+categories:
   - 题解
-tags: 
+tags:
   - 网络流
   - 最小割
   - 图论
-description: 
-picUrl: 
+abbrlink: '2879'
+date: 2020-09-16 12:29:08
+description:
+picUrl:
 ---
 
 

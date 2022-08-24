@@ -1,11 +1,12 @@
 ---
 title: UVALive 6938 Outer space invaders
 mathjax: true
-date: 2020-09-07 18:51:59
-categories: 
+categories:
   - 题解
-tags: 
+tags:
   - 动态规划
+abbrlink: 1ff6
+date: 2020-09-07 18:51:59
 ---
 
 

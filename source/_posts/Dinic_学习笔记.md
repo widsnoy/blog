@@ -1,14 +1,15 @@
 ---
 title: Dinic 学习笔记
 mathjax: true
-date: 2020-09-16 09:59:00
-categories: 
+categories:
   - 模板
-tags: 
+tags:
   - 最大流
   - 网络流
-description: 
-picUrl: 
+abbrlink: '624'
+date: 2020-09-16 09:59:00
+description:
+picUrl:
 ---
 
 

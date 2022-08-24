@@ -1,15 +1,16 @@
 ---
 title: C、D题解解析
 mathjax: true
-date: 2020-11-12 20:25:07
-categories: 
+categories:
   - 测试
-tags: 
+tags:
   - 数学
   - 动态规划
   - 组合数学
   - 容斥原理
-thumb: 
+abbrlink: e9d6
+date: 2020-11-12 20:25:07
+thumb:
 ---
 
 

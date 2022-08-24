@@ -1,14 +1,15 @@
 ---
 title: P2057 Vote 善意的投票
 mathjax: true
-date: 2020-09-16 15:39:06
-categories: 
+categories:
   - 题解
-tags: 
+tags:
   - 网络流
   - 最小割
-description: 
-picUrl: 
+abbrlink: a636
+date: 2020-09-16 15:39:06
+description:
+picUrl:
 ---
 
 

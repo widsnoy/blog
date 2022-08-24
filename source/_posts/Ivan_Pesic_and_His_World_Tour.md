@@ -1,12 +1,13 @@
 ---
 title: Ivan Pesic and His World Tour
 mathjax: true
-date: 2020-10-14 18:56:14
-categories: 
+categories:
   - 题解
-tags: 
+tags:
   - hash
   - 树链剖分
+abbrlink: 4a7
+date: 2020-10-14 18:56:14
 ---
 
 

@@ -1,11 +1,12 @@
 ---
-title: LOJ 529 「LibreOJ β Round #5」自然语言
+title: LOJ 529 「LibreOJ β Round
 mathjax: true
-date: 2020-09-01 21:56:00
-categories: 
+categories:
   - 题解
-tags: 
+tags:
   - 字符串
+abbrlink: eab9
+date: 2020-09-01 21:56:00
 ---
 
 

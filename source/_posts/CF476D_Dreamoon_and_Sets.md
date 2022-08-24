@@ -1,13 +1,14 @@
 ---
 title: CF476D Dreamoon and Sets
 mathjax: true
-date: 2020-09-15 17:22:25
-categories: 
+categories:
   - 题解
-tags: 
+tags:
   - 构造
-description: 
-picUrl: 
+abbrlink: 15d9
+date: 2020-09-15 17:22:25
+description:
+picUrl:
 ---
 
 

@@ -1,13 +1,14 @@
 ---
 title: CF1416C XOR Inverse
 mathjax: true
-date: 2020-09-29 16:28:02
-categories: 
+categories:
   - 题解
-tags: 
+tags:
   - 01tire
-description: 
-picUrl: 
+abbrlink: b3f6
+date: 2020-09-29 16:28:02
+description:
+picUrl:
 ---
 
 

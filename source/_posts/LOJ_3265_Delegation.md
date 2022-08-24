@@ -1,13 +1,14 @@
 ---
 title: LOJ 3265 Delegation
 mathjax: true
-date: 2020-09-23 07:43:39
-categories: 
+categories:
   - 题解
-tags: 
+tags:
   - 贪心
-description: 
-picUrl: 
+abbrlink: a9f4
+date: 2020-09-23 07:43:39
+description:
+picUrl:
 ---
 
 

@@ -1,11 +1,12 @@
 ---
 title: UVA10817 Headmaster's Headache
 mathjax: true
-date: 2020-09-07 14:59:00
-categories: 
+categories:
   - 题解
-tags: 
+tags:
   - 动态规划
+abbrlink: 2f92
+date: 2020-09-07 14:59:00
 ---
 
 

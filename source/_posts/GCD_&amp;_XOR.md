@@ -1,16 +1,17 @@
 ---
 title: GCD &amp; XOR
 mathjax: true
-date: 2020-09-30 10:17:00
-categories: 
+categories:
   - 题解
-tags: 
+tags:
   - 数学
   - 数论
   - gcd
   - xor
-description: 
-picUrl: 
+abbrlink: 4fa9
+date: 2020-09-30 10:17:00
+description:
+picUrl:
 ---
 
 

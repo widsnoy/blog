@@ -1,15 +1,16 @@
 ---
 title: P1344 Pollutant Control
 mathjax: true
-date: 2020-09-16 10:57:00
-categories: 
+categories:
   - 题解
-tags: 
+tags:
   - 最小割
   - 网络流
   - 图论
-description: 
-picUrl: 
+abbrlink: 6b86
+date: 2020-09-16 10:57:00
+description:
+picUrl:
 ---
 
 

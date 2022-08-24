@@ -1,11 +1,12 @@
 ---
-title: 「LibreOJ β Round #2」DP 一般看规律
+title: 「LibreOJ β Round
 mathjax: true
-date: 2020-10-20 21:10:31
-categories: 
+categories:
   - 题解
-tags: 
+tags:
   - 数据结构
+abbrlink: c8ea
+date: 2020-10-20 21:10:31
 ---
 
 

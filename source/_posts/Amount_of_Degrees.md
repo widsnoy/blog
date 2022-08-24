@@ -1,12 +1,13 @@
 ---
 title: Amount of Degrees
 mathjax: true
-date: 2020-10-14 19:07:19
-categories: 
+categories:
   - 题解
-tags: 
+tags:
   - 动态规划
   - 数位dp
+abbrlink: e1b0
+date: 2020-10-14 19:07:19
 ---
 
 

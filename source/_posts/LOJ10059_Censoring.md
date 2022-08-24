@@ -1,14 +1,15 @@
 ---
 title: LOJ10059 Censoring
 mathjax: true
-date: 2020-09-26 18:03:19
-categories: 
+categories:
   - 题解
-tags: 
+tags:
   - 字符串
   - AC自动机
-description: 
-picUrl: 
+abbrlink: 9f6c
+date: 2020-09-26 18:03:19
+description:
+picUrl:
 ---
 
 

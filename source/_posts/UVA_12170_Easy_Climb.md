@@ -1,13 +1,14 @@
 ---
 title: UVA 12170 Easy Climb
 mathjax: true
-date: 2020-09-07 19:06:00
-categories: 
+categories:
   - 题解
-tags: 
+tags:
   - 动态规划
-description: 
-picUrl: 
+abbrlink: 2c8
+date: 2020-09-07 19:06:00
+description:
+picUrl:
 ---
 
 

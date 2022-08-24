@@ -1,13 +1,14 @@
 ---
-title: LOJ535「LibreOJ Round #6」花火
+title: LOJ535「LibreOJ Round
 mathjax: true
-date: 2020-08-29 14:46:00
-categories: 
+categories:
   - 题解
-tags: 
+tags:
   - CDQ分治
   - 线段树
   - 扫描线
+abbrlink: '7152'
+date: 2020-08-29 14:46:00
 ---
 
 

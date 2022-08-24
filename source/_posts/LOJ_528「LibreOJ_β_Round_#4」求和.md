@@ -1,12 +1,13 @@
 ---
-title: LOJ 528「LibreOJ β Round #4」求和
+title: LOJ 528「LibreOJ β Round
 mathjax: true
-date: 2020-08-30 21:14:00
-categories: 
+categories:
   - 题解
-tags: 
+tags:
   - 莫比乌斯反演
   - 数论分块
+abbrlink: 8d24
+date: 2020-08-30 21:14:00
 ---
 
 

@@ -1,10 +1,11 @@
 ---
 title: 高考题面背后的故事
 mathjax: true
-date: 2021-12-25 21:33:25
 categories: 数学
 tags:
-- 数学
+  - 数学
+abbrlink: da42
+date: 2021-12-25 21:33:25
 ---
 做到过这样一道题
 ![](/img/2021-12-25|21-32-07screenshot.png)

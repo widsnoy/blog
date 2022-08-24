@@ -1,13 +1,14 @@
 ---
 title: BZOJ 1034 泡泡堂BNB
 mathjax: true
-date: 2020-09-17 15:34:20
-categories: 
+categories:
   - 题解
-tags: 
+tags:
   - 贪心
-description: 
-picUrl: 
+abbrlink: dc90
+date: 2020-09-17 15:34:20
+description:
+picUrl:
 ---
 
 

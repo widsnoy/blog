@@ -35,8 +35,8 @@ copy:
 # formal:
 #   icon: link || the description
 social:
-  fab fa-github: https://github.com/ricofx47 || Github
-  fas fa-envelope: mailto:ricofx47@outlook.com || Email
+  # fab fa-github: https://github.com/ricofx47 || Github
+  # fas fa-envelope: mailto:ricofx47@outlook.com || Email
 
 # search (搜索)
 # see https://butterfly.js.org/posts/ceeb73f/#搜索系統
@@ -115,9 +115,9 @@ category_per_img:
 
 cover:
   # display the cover or not (是否顯示文章封面)
-  index_enable: true
-  aside_enable: true
-  archives_enable: true
+  index_enable: false
+  aside_enable: false
+  archives_enable: false
   # the position of cover in home page (封面顯示的位置)
   # left/right/both
   position: left
@@ -260,11 +260,11 @@ addtoany:
 comments:
   # Up to two comments system, the first will be shown as default
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
-  use: # Valine,Disqus
+  use: Livere # Valine,Disqus
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
-  lazyload: false
+  lazyload: true
   count: false # Display comment count in post's top_img
   card_post_count: false # Display comment count in Home Page
 
@@ -285,7 +285,7 @@ disqusjs:
 # livere (來必力)
 # https://www.livere.com/
 livere:
-  uid:
+  uid: MTAyMC81NzExOC8zMzU4Mg==
 
 # gitalk
 # https://github.com/gitalk/gitalk
@@ -514,7 +514,7 @@ tag_ui: # 留空或 index
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
-background: url(/img/2013-10_1920x1080_1_to48jp.png)
+background: url(/img/2013-08_1920x1080.png)
 
 # Footer Background
 footer_bg: true
@@ -618,13 +618,13 @@ hr_icon:
 subtitle:
   enable: false
   # Typewriter Effect (打字效果)
-  effect: true
+  effect: false
   # Effect Speed Options (打字效果速度參數)
   startDelay: 300 # time before typing starts in milliseconds
   typeSpeed: 150 # type speed in milliseconds
   backSpeed: 50 # backspacing speed in milliseconds
   # loop (循環打字)
-  loop: true
+  loop: false
   # source 調用第三方服務
   # source: false 關閉調用
   # source: 1  調用一言網的一句話（簡體） https://hitokoto.cn/
@@ -634,6 +634,7 @@ subtitle:
   source: false
   # 如果關閉打字效果，subtitle 只會顯示 sub 的第一行文字
   sub:
+    - 凭君莫话封侯事，一将功成万骨枯
 
 # Loading Animation (加載動畫)
 preloader: false
@@ -656,9 +657,9 @@ aside:
     description:
     button:
       enable: true
-      icon: fab fa-github
-      text: Follow Me
-      link: https://github.com/xxxxxx
+      icon: fas fa-envelope
+      text: Contact Me
+      link: mailto:ricofx47@outlook.com
   card_announcement:
     enable: true
     content: This is my Blog
@@ -716,7 +717,7 @@ newest_comments:
 
 # Conversion between Traditional and Simplified Chinese (簡繁轉換)
 translate:
-  enable: false
+  enable: true
   # The text of a button
   default: 繁
   # the language of website (1 - Traditional Chinese/ 2 - Simplified Chinese）
@@ -740,7 +741,7 @@ darkmode:
   # autoChangeMode: 1  Following System Settings, if the system doesn't support dark mode, it will switch dark mode between 6 pm to 6 am
   # autoChangeMode: 2  Switch dark mode between 6 pm to 6 am
   # autoChangeMode: false
-  autoChangeMode: false
+  autoChangeMode: 1
 
 # Don't modify the following settings unless you know how they work (非必要請不要修改 )
 # Choose: readmode,translate,darkmode,hideAside,toc,chat,comment
@@ -828,7 +829,7 @@ pangu:
 # Lazyload (圖片懶加載)
 # https://github.com/verlok/vanilla-lazyload
 lazyload:
-  enable: false
+  enable: true
   field: site # site/post
   placeholder:
   blur: false
@@ -856,7 +857,7 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
-    # - <link rel="stylesheet" href="/xxx.css">
+     - <link rel="stylesheet" href="/css/me.css">
   bottom:
     # - <script src="xxxx"></script>
 
