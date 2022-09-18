@@ -1,6 +1,6 @@
 ---
 title: UVA10859 Placing Lampposts
-mathjax: true
+math: true
 categories:
   - 题解
 tags:

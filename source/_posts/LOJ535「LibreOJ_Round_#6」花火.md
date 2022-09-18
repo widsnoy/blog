@@ -1,6 +1,6 @@
 ---
 title: LOJ535「LibreOJ Round
-mathjax: true
+math: true
 categories:
   - 题解
 tags:

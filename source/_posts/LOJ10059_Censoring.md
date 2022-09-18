@@ -1,6 +1,6 @@
 ---
 title: LOJ10059 Censoring
-mathjax: true
+math: true
 categories:
   - 题解
 tags:

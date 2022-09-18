@@ -1,6 +1,6 @@
 ---
 title: LOJ 3282 「JOISC 2020 Day4」治疗计划
-mathjax: true
+math: true
 categories:
   - 题解
 abbrlink: adda

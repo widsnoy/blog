@@ -1,6 +1,6 @@
 ---
 title: P2057 Vote 善意的投票
-mathjax: true
+math: true
 categories:
   - 题解
 tags:

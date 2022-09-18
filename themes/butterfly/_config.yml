@@ -80,7 +80,7 @@ favicon: /img/favicon.png
 
 # Avatar (頭像)
 avatar:
-  img: /img/avatar.jpg
+  img: /img/avatar.png
   effect: false
 
 # Disable all banner image
@@ -514,7 +514,7 @@ tag_ui: # 留空或 index
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
-background: url(/img/2013-08_1920x1080.png)
+background:
 
 # Footer Background
 footer_bg: true
@@ -857,7 +857,7 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
-     - <link rel="stylesheet" href="/css/me.css">
+    # - <link rel="stylesheet" href="/css/me.css">
   bottom:
     # - <script src="xxxx"></script>
 

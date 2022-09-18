@@ -1,6 +1,6 @@
 ---
 title: UVa1642 魔法gcd Magical gcd
-mathjax: true
+math: true
 categories:
   - 题解
 tags:

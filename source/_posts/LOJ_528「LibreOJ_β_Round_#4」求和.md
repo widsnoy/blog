@@ -1,6 +1,6 @@
 ---
 title: LOJ 528「LibreOJ β Round
-mathjax: true
+math: true
 categories:
   - 题解
 tags:

@@ -1,6 +1,6 @@
 ---
 title: BZOJ 1034 泡泡堂BNB
-mathjax: true
+math: true
 categories:
   - 题解
 tags:

@@ -1,6 +1,6 @@
 ---
 title: UVA10817 Headmaster's Headache
-mathjax: true
+math: true
 categories:
   - 题解
 tags:

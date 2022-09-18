@@ -1,6 +1,6 @@
 ---
 title: 'P6713 [CCO2018] Geese vs. Hawks'
-mathjax: true
+math: true
 categories:
   - 题解
 tags:

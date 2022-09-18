@@ -1,6 +1,6 @@
 ---
 title: CF1416C XOR Inverse
-mathjax: true
+math: true
 categories:
   - 题解
 tags:

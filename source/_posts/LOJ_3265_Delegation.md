@@ -1,6 +1,6 @@
 ---
 title: LOJ 3265 Delegation
-mathjax: true
+math: true
 categories:
   - 题解
 tags:

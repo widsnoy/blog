@@ -1,6 +1,6 @@
 ---
 title: Old Driver Tree「珂朵莉树」
-mathjax: true
+math: true
 categories:
   - 模板
 tags:

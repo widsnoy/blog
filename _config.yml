@@ -7,7 +7,7 @@ title: ricofx的小窝
 subtitle: ''
 description: ''
 keywords:
-author: ricofx47
+author: ricofx
 language: zh-CN
 timezone: 'Asia/Shanghai'
 
@@ -97,7 +97,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: butterfly
+theme: fluid
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -119,15 +119,6 @@ feed:
   icon: icon.png
   autodiscovery: true
   template:
-
-kramed:
-  gfm: true
-  pedantic: false
-  sanitize: false
-  tables: true
-  breaks: true
-  smartLists: true
-  smartypants: true
 
 search:
   path: search.xml

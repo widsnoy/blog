@@ -1,6 +1,6 @@
 ---
 title: P1344 Pollutant Control
-mathjax: true
+math: true
 categories:
   - 题解
 tags:

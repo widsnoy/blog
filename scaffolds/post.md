@@ -19,8 +19,7 @@ copyright_author:
 copyright_author_href:
 copyright_url:
 copyright_info:
-mathjax:
-katex:
+math:
 aplayer:
 highlight_shrink:
 aside:

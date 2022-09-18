@@ -1,6 +1,6 @@
 ---
 title: UVA 12170 Easy Climb
-mathjax: true
+math: true
 categories:
   - 题解
 tags:

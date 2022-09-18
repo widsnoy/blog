@@ -1,6 +1,6 @@
 ---
 title: SUMCUBE 立方和
-mathjax: true
+math: true
 categories:
   - 题解
 tags:

@@ -1,6 +1,6 @@
 ---
 title: min-25筛学习笔记
-mathjax: true
+math: true
 categories:
   - 模板
 tags:

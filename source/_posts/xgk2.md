@@ -1,6 +1,6 @@
 ---
 title: 高考题面背后的故事
-mathjax: true
+math: true
 categories: 数学
 tags:
   - 数学

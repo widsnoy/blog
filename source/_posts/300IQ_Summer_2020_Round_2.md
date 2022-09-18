@@ -1,6 +1,6 @@
 ---
 title: 300IQ Summer 2020 Round 2
-mathjax: true
+math: true
 categories:
   - 测试
 tags:
@@ -96,7 +96,7 @@ int main() {
 #include<bits/stdc++.h>
 using namespace std;
 
-#define int --int128
+#define int __int128
 const int N = 200005;
 int n, k, x[N], y[N];
 vector<int> v;
