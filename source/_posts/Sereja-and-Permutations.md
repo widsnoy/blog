@@ -1,15 +1,16 @@
 ---
-layout: posts
 title: Sereja and Permutations
-date: 2022-09-18 23:36:23
 categories: 题解
-tags: 
-- 哈希
-- 树状数组
+tags:
+  - 哈希
+  - 树状数组
 math: true
+abbrlink: 567a
+date: 2022-09-18 23:36:23
 ---
 
-[SEAPERM2.pdf](https://s3.amazonaws.com/codechef_shared/download/translated/NOV14/mandarin/SEAPERM2.pdf)  
+[SEAPERM2.pdf](https://s3.amazonaws.com/codechef_shared/download/translated/NOV14/mandarin/SEAPERM2.pdf)    
+
 ## $O(n^5)$
 因为总有一个排列是由删除$p_1$得来的，所以可以枚举之并还原每个$n-1$的排列。得到$n^2$个可能的 P。 然后暴力验证每一个。
 

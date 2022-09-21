@@ -1,5 +1,5 @@
 ---
-title: LOJ535「LibreOJ Round
+title: 「LibreOJ Round #6」花火
 math: true
 categories:
   - 题解
@@ -14,7 +14,8 @@ date: 2020-08-29 14:46:00
 
 >题目链接:[https://loj.ac/problem/535](https://loj.ac/problem/535)  
 
-虽然写几个不同的方法写了三个小时,做这道题收获还是挺大/cy.  
+虽然写几个不同的方法写了三个小时,做这道题收获还是挺大/cy.    
+
 ## 题目
 $n$个烟火排成一排，从左到右高度分别为$h-1,h-2,...,h-n$ ，这些高度两两不同。  
 每次 Yoko 可以选择两个相邻的烟火交换，这样的交换可以进行任意多次。
