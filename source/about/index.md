@@ -1,15 +1,7 @@
 ---
 title: about
 date: 2022-09-19 00:02:40
-updated:
-type:
-comments:
-description:
-keywords:
-top_img:
-mathjax:
-katex:
-aside:
-aplayer:
-highlight_shrink:
+layout: about
 ---
+[another view](https://ricofxcloud.top)
+[paste somethin? ~~求轻虐~~](https://r.ricofx.moe)
