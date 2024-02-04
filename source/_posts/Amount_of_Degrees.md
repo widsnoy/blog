@@ -1,6 +1,6 @@
 ---
 title: Amount of Degrees
-math: true
+mathjax: true
 categories:
   - 题解
 tags:

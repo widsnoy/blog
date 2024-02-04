@@ -1,6 +1,6 @@
 ---
 title: LOJ 10082 Word Rings
-math: true
+mathjax: true
 categories:
   - 题解
 tags:

@@ -1,6 +1,6 @@
 ---
 title: UVALive 6938 Outer space invaders
-math: true
+mathjax: true
 categories:
   - 题解
 tags:

@@ -1,6 +1,6 @@
 ---
 title: GCD &amp; XOR
-math: true
+mathjax: true
 categories:
   - 题解
 tags:

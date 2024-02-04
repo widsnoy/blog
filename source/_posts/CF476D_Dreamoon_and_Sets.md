@@ -1,6 +1,6 @@
 ---
 title: CF476D Dreamoon and Sets
-math: true
+mathjax: true
 categories:
   - 题解
 tags:

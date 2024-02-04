@@ -1,6 +1,6 @@
 ---
 title: Ivan Pesic and His World Tour
-math: true
+mathjax: true
 categories:
   - 题解
 tags:

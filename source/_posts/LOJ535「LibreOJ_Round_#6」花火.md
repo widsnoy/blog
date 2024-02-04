@@ -1,6 +1,6 @@
 ---
 title: 「LibreOJ Round #6」花火
-math: true
+mathjax: true
 categories:
   - 题解
 tags:

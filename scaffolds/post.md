@@ -4,8 +4,6 @@ date: {{ date }}
 categories:
 tags:
 updated:
-tags:
-categories:
 keywords:
 description:
 top_img:
@@ -19,7 +17,7 @@ copyright_author:
 copyright_author_href:
 copyright_url:
 copyright_info:
-math:
+mathjax: 
 aplayer:
 highlight_shrink:
 aside:

@@ -4,7 +4,7 @@ categories: 题解
 tags:
   - 哈希
   - 树状数组
-math: true
+mathjax: true
 abbrlink: 567a
 date: 2022-09-18 23:36:23
 ---

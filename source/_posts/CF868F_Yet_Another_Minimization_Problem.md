@@ -1,6 +1,6 @@
 ---
 title: CF868F Yet Another Minimization Problem
-math: true
+mathjax: true
 categories:
   - 题解
 tags:

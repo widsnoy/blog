@@ -1,6 +1,6 @@
 ---
 title: 300IQ Summer 2020 Round 1
-math: true
+mathjax: true
 categories:
   - 测试
 tags:

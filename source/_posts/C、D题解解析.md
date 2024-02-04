@@ -1,6 +1,6 @@
 ---
 title: C、D题解解析
-math: true
+mathjax: true
 categories:
   - 测试
 tags:

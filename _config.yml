@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: ricofx的小窝
+title: widsnoy's blog
 subtitle: ''
 description: ''
 keywords:
-author: ricofx
+author: widsnoy
 language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://ricofx.moe
+url: https://widsnoy.top
 permalink: posts/:abbrlink/
 permalink_defaults:
 pretty_urls:
@@ -97,13 +97,13 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: fluid
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: ssh://git@ricofx.moe:27328/home/git/blog.git
+  repo: ssh://git@widsnoy.top:28675/home/git/blog.git
   branch: master
 
 feed:
@@ -120,12 +120,6 @@ feed:
   autodiscovery: true
   template:
 
-search:
-  path: search.xml
-  field: post
-  content: true
-  template: ./search.xml
-
 # abbrlink config
 abbrlink:
   alg: crc16      #support crc16(default) and crc32
@@ -140,3 +134,23 @@ abbrlink:
   auto_title: false #enable auto title, it can auto fill the title by path
   auto_date: false #enable auto date, it can auto fill the date by time today
   force: false #enable force mode,in this mode, the plugin will ignore the cache, and calc the abbrlink for every post even it already had abbrlink. This only updates abbrlink rather than other front variables.
+
+excerpt:
+  depth: 10
+  excerpt_excludes: []
+  more_excludes: []
+  hideWholePostExcerpts: true
+
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
+
+sitemap:
+  path: 
+    - sitemap.xml
+    - sitemap.txt
+  rel: false
+  tags: true
+  categories: true

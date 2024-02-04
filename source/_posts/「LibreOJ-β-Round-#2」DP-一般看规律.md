@@ -1,6 +1,6 @@
 ---
 title: 「LibreOJ β Round
-math: true
+mathjax: true
 categories:
   - 题解
 tags:

@@ -1,6 +1,6 @@
 ---
 title: P1345 Telecowmunication
-math: true
+mathjax: true
 categories:
   - 题解
 tags:

@@ -1,6 +1,6 @@
 ---
 title: ARC062F Painting Graphs with AtCoDeer
-math: true
+mathjax: true
 categories:
   - 题解
 tags:

@@ -1,6 +1,6 @@
 ---
 title: Dinic 学习笔记
-math: true
+mathjax: true
 categories:
   - 模板
 tags:
