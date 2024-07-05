@@ -31,7 +31,6 @@ aside:
 <!--more-->
 
 ```cpp
-//能确定的事情只有啊，今天感觉有点寂寞啊
 #include <bits/stdc++.h>
 //#include <ext/pb_ds/assoc_container.hpp>
 //#include <ext/pb_ds/tree_policy.hpp>
