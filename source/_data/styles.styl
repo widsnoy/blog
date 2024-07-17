@@ -1,3 +1,14 @@
 :root {
   --content-bg-color:#ffffffe6;
 }
+
+/* 背景图片 */
+body {
+  background-image: url(/img/background.jpg);
+  background-repeat: repeat;
+  background-attachment: fixed;
+
+  @media (prefers-color-scheme: dark) {
+    background-image: none;
+  }
+}
