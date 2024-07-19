@@ -1,0 +1,7 @@
+# robots.txt
+User-agent: *
+Allow: /
+Allow: /posts/
+
+Sitemap: https://widsnoy.top/sitemap.xml
+
