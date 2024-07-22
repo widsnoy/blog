@@ -282,7 +282,7 @@ follow_me:
   #Twitter: https://twitter.com/username || fab fa-twitter
   #Telegram: https://t.me/channel_name || fab fa-telegram
   #WeChat: /images/wechat_channel.png || fab fa-weixin
-  RSS: /atom.xml || fa fa-rss
+  #RSS: /atom.xml || fa fa-rss
 
 # Related popular posts
 # Dependencies: https://github.com/sergeyzwezdin/hexo-related-posts
@@ -668,11 +668,11 @@ comments:
   style: tabs
   # Choose a comment system to be displayed by default.
   # Available values: disqus | disqusjs | changyan | livere | gitalk | utterances
-  active: 
+  active: giscus
   # Setting `true` means remembering the comment system selected by the visitor.
   storage: true
   # Lazyload all comment systems.
-  lazyload: false
+  lazyload: true
   # Modify texts or order for any naves, here are some examples.
   nav:
     #disqus:
@@ -680,6 +680,28 @@ comments:
     #  order: -1
     #gitalk:
     #  order: -2
+
+# giscus
+giscus:
+  enable: true
+  repo: widsnoy/blog # Github repository name
+  repo_id: R_kgDOK29mMg # Github repository id
+  category: Show and tell # Github discussion category
+  category_id: DIC_kwDOK29mMs4ChFAz # Github discussion category id
+  # Available values: pathname | url | title | og:title
+  mapping: pathname
+  # Available values: 0 | 1
+  reactions_enabled: 1
+   # Available values: 0 | 1
+  emit_metadata: 1
+  # Available values: light | light_high_contrast | light_protanopia | light_tritanopia | dark | dark_high_contrast | dark_protanopia | dark_tritanopia | dark_dimmed | preferred_color_scheme | transparent_dark | noborder_light | noborder_dark | noborder_gray | cobalt | purple_dark
+  theme: light
+  # Available values: en | zh-CN
+  lang: zh-CN
+  # Place the comment box above the comments
+  input_position: bottom
+  # Load the comments lazily
+  loading: lazy
 
 # Disqus
 # For more information: https://disqus.com
