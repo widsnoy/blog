@@ -24,7 +24,6 @@ aplayer:
 highlight_shrink:
 aside:
 ---
-> 多项式模板: https://github.com/widsnoy/algorithms/blob/main/%E5%A4%9A%E9%A1%B9%E5%BC%8F/poly.cpp
 
 ## 生成函数
 - 常用封闭形式
@@ -165,3 +164,264 @@ $F_k=\prod\limits_{i\ge1}^k\dfrac{1}{1-x^i}$，分母可以用分治 + FFT或者
 
 这个封闭形式，也可以根据 Ferries 图的理论，将 $n$ 拆分成 $k$ 个自然数的方案数等于将 $n$ 拆分为若干个不大于 $k$ 的自然数的方案数，这是一个完全背包，可以用生成函数优化。  
 填 $1$ 的生成函数: $\sum x^i=\dfrac{1}{1-x}$, 填 $2$ 的生成函数: $\sum x^{2i}=\dfrac{1}{1-x^2}$, 填 $3$ 的生成函数: $\sum x^{3i}=\dfrac{1}{1-x^3}\dots$  
+
+## code
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef vector<int> poly;
+const int mod = 998244353;
+const int N = 4000000 + 5;
+
+int rf[26][N];
+int fpow(int a, int b) {
+    int res = 1;
+    for (; b; b >>= 1, a = a * 1ll * a % mod) if (b & 1)
+        res = res * 1ll * a % mod;
+    return res;
+}
+void init(int n) {
+    assert(n < N);
+    int lg = __lg(n);
+    static vector<bool> bt(26, 0);
+    if (bt[lg] == 1) return;
+    bt[lg] = 1;
+    for (int i = 0; i < n; i++) rf[lg][i] = (rf[lg][i >> 1] >> 1) + ((i & 1) ? (n >> 1) : 0);
+}
+void ntt(poly &x, int lim, int op) {
+    int lg = __lg(lim), gn, g, tmp;
+    for (int i = 0; i < lim; i++) if (i < rf[lg][i]) swap(x[i], x[rf[lg][i]]);
+    for (int len = 2; len <= lim; len <<= 1) {
+        int k = (len >> 1);
+        gn = fpow(3, (mod - 1) / len);
+        for (int i = 0; i < lim; i += len) {
+            g = 1;
+            for (int j = 0; j < k; j++, g = gn * 1ll * g % mod) {
+                tmp = x[i + j + k] * 1ll * g % mod;
+                x[i + j + k] = (x[i + j] - tmp + mod) % mod;
+                x[i + j] = (x[i + j] + tmp) % mod;
+            }
+        }
+    }
+    if (op == -1) {
+        reverse(x.begin() + 1, x.begin() + lim);
+        int inv = fpow(lim, mod - 2);
+        for (int i = 0; i < lim; i++) x[i] = x[i] * 1ll * inv % mod;
+    }
+}
+poly multiply(const poly &a, const poly &b) {
+    assert(!a.empty() && !b.empty());
+    int lim = 1;
+    while (lim + 1 < int(a.size() + b.size())) lim <<= 1;
+    init(lim);
+    poly pa = a, pb = b;
+    pa.resize(lim);
+    pb.resize(lim);
+    ntt(pa, lim, 1); ntt(pb, lim, 1);
+    for (int i = 0; i < lim; i++) pa[i] = pa[i] * 1ll * pb[i] % mod;
+    ntt(pa, lim, -1);
+    pa.resize(int(a.size() + b.size()) - 1);
+    return pa;
+}
+poly prod_poly(const vector<poly>& vec) {
+    int n = vec.size();
+    auto calc = [&](const auto &self, int l, int r) -> poly {
+        if (l == r) return vec[l];
+        int mid = (l + r) >> 1;
+        return multiply(self(self, l, mid), self(self, mid + 1, r));
+    };
+    return calc(calc, 0, n - 1);
+}
+
+// Semi-Online-Convolution
+poly semi_online_convolution(const poly& g, int n, int op = 0) {
+    assert(n == g.size());
+    poly f(n, 0);
+    f[0] = 1;
+    auto CDQ = [&](const auto &self, int l, int r) -> void {
+        if (l == r) {
+            // exp
+            if (op == 1 && l > 0) f[l] = f[l] * 1ll * fpow(l, mod - 2) % mod;
+            return;
+        }
+        int mid = (l + r) >> 1;
+        self(self, l, mid);
+        poly a, b;
+        for (int i = l; i <= mid; i++) a.push_back(f[i]);
+        for (int i = 0; i <= r - l - 1; i++) b.push_back(g[i + 1]);
+        a = multiply(a, b);
+        for (int i = mid + 1; i <= r; i++) f[i] = (f[i] + a[i - l - 1]) % mod;
+        self(self, mid + 1, r);
+    };
+    CDQ(CDQ, 0, n - 1);
+    return f;
+}
+
+poly getinv(const poly &a) {
+    assert(!a.empty());
+    poly res = {fpow(a[0], mod - 2)}, na = {a[0]};
+    int lim = 1;
+    while (lim < int(a.size())) lim <<= 1;
+    for (int len = 2; len <= lim; len <<= 1) {
+        while (na.size() < len) {
+            int tmp = na.size();
+            if (tmp < a.size()) na.push_back(a[tmp]);
+            else na.push_back(0);
+        }
+        auto tmp = multiply(na, res);
+        for (auto &x : tmp) x = (x > 0 ? mod - x : x);
+        tmp[0] = ((tmp[0] + 2) >= mod) && (tmp[0] -= mod);
+        tmp = multiply(res, tmp);
+        tmp.resize(len);
+        res = tmp;
+    }
+    res.resize(a.size());
+    return res;
+}
+poly exp(const poly &g) {
+    int n = g.size();
+    poly b(n, 0);
+    for (int i = 1; i < n; i++) b[i] = i * 1ll * g[i] % mod;
+    return semi_online_convolution(b, n, 1);
+}
+poly ln(const poly &A) {
+    int n = A.size();
+    auto C = getinv(A);
+    poly A1(n, 0);
+    for (int i = 0; i < n - 1; i++) A1[i] = (i + 1) * 1ll * A[i + 1] % mod;
+    C = multiply(C, A1);
+    for (int i = n - 1; i > 0; i--) C[i] = C[i - 1] * 1ll * fpow(i, mod - 2) % mod;
+    C[0] = 0;
+    C.resize(n);
+    return C;
+}
+poly quick_pow(poly &a, int k, int k_mod_phi, bool is_k_bigger_than_mod) {
+    assert(!a.empty());
+    int n = a.size(), t = -1, b;
+    for (int i = 0; i < n; i++) if (a[i]) {
+        t = i, b = a[i];
+        break;
+    }
+    if (t == -1 || t && is_k_bigger_than_mod || k * 1ll * t >= n) return poly(n, 0);
+    poly f;
+    for (int i = 0; i < n; i++) {
+        if (i + t < n) f.push_back(a[i + t] * 1ll * fpow(b, mod - 2) % mod);
+        else f.push_back(0);
+    }
+    f = ln(f);
+    for (auto &x : f) x = x * 1ll * k % mod;
+    f = exp(f);
+    poly res;
+    for (int i = 0; i < k * t; i++) res.push_back(0);
+    int fb = fpow(b, k_mod_phi);
+    for (int i = k * t; i < n; i++) res.push_back(f[i - k * t] * 1ll * fb % mod);
+    return res;
+}
+```
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef complex<double> cp;
+typedef vector<cp> poly;
+typedef long long ll;
+
+const int N = 4000000 + 5;
+const double pi = acos(-1);
+
+int rf[26][N];
+void init(int n) {
+    assert(n < N);
+    int lg = __lg(n);
+    static vector<bool> bt(26, 0);
+    if (bt[lg] == 1) return;
+    bt[lg] = 1;
+    for (int i = 0; i < n; i++) rf[lg][i] = (rf[lg][i >> 1] >> 1) + ((i & 1) ? (n >> 1) : 0);
+}
+void fft(poly &x, int lim, int op) {
+    int lg = __lg(lim);
+    for (int i = 0; i < lim; i++) if (i < rf[lg][i]) swap(x[i], x[rf[lg][i]]);
+    for (int len = 2; len <= lim; len <<= 1) {
+        int k = (len >> 1);
+        for (int i = 0; i < lim; i += len) {
+            for (int j = 0; j < k; j++) {
+                cp w(cos(pi * j / k), op * sin(pi * j / k));
+                cp tmp = w * x[i + j + k];
+                x[i + j + k] = x[i + j] - tmp;
+                x[i + j] = x[i + j] + tmp;
+            }
+        }
+    }
+    if (op == -1) for (int i = 0; i < lim; i++) x[i] /= lim;
+}
+poly multiply(const poly &a, const poly &b) {
+    assert(!a.empty() && !b.empty());
+    int lim = 1;
+    while (lim + 1 < int(a.size() + b.size())) lim <<= 1;
+    init(lim);
+    poly pa = a, pb = b;
+    pa.resize(lim);
+    pb.resize(lim);
+    for (int i = 0; i < lim; i++) pa[i] = (cp){pa[i].real(), pb[i].real()};
+    fft(pa, lim, 1);
+    pb[0] = conj(pa[0]);
+    for (int i = 1; i < lim; i++) pb[lim - i] = conj(pa[i]);
+    for (int i = 0; i < lim; i++) {
+        pa[i] = (pa[i] + pb[i]) * (pa[i] - pb[i]) / cp({0, 4});
+    }
+    fft(pa, lim, -1);
+    pa.resize(int(a.size() + b.size()) - 1);
+    return pa;
+}
+vector<int> MTT(const vector<int> &a, const vector<int> &b, const int mod) {
+    const int B = (1 << 15) - 1, M = (1 << 15);
+    int lim = 1;
+    while (lim + 1 < int(a.size() + b.size())) lim <<= 1;
+    init(lim);
+    poly pa(lim), pb(lim);
+    auto get = [](const vector<int>& v, int pos) -> int {
+        if (pos >= v.size()) return 0;
+        else return v[pos];
+    };
+    for (int i = 0; i < lim; i++) pa[i] = (cp){get(a, i) >> 15, get(a, i) & B};
+    fft(pa, lim, 1);
+    pb[0] = conj(pa[0]);
+    for (int i = 1; i < lim; i++) pb[lim - i] = conj(pa[i]);
+    poly A0(lim), A1(lim);
+    for (int i = 0; i < lim; i++) {
+        A0[i] = (pa[i] + pb[i]) / (cp){2, 0};
+        A1[i] = (pa[i] - pb[i]) / (cp){0, 2}; 
+    }
+    for (int i = 0; i < lim; i++) pa[i] = (cp){get(b, i) >> 15, get(b, i) & B};
+    fft(pa, lim, 1);
+    pb[0] = conj(pa[0]);
+    for (int i = 1; i < lim; i++) pb[lim - i] = conj(pa[i]);
+    poly B0(lim), B1(lim);
+    for (int i = 0; i < lim; i++) {
+        B0[i] = (pa[i] + pb[i]) / (cp){2, 0};
+        B1[i] = (pa[i] - pb[i]) / (cp){0, 2}; 
+    }
+    for (int i = 0; i < lim; i++) {
+        pa[i] = A0[i] * B0[i];
+        pb[i] = A0[i] * B1[i];
+        A0[i] = pa[i];
+        pa[i] = A1[i] * B1[i];
+        B1[i] = pb[i];
+        B0[i] = A1[i] * B0[i];
+        A1[i] = pa[i];
+        pa[i] = A0[i] + (cp){0, 1} * A1[i];
+        pb[i] = B0[i] + (cp){0, 1} * B1[i];
+    }
+    fft(pa, lim, -1); fft(pb, lim, -1);
+    vector<int> res(int(a.size() + b.size()) - 1);
+    const int M2 = M * 1ll * M % mod;
+    for (int i = 0; i < res.size(); i++) {
+        ll a0 = round(pa[i].real()), a1 = round(pa[i].imag()), b0 = round(pb[i].real()), b1 = round(pb[i].imag());
+        a0 %= mod; a1 %= mod; b0 %= mod; b1 %= mod;
+        res[i] = (a0 * 1ll * M2 % mod + a1 + (b0 + b1) % mod * 1ll * M % mod) % mod;
+    }
+    return res;
+}
+```
